@@ -1,4 +1,0 @@
-Title: enterprise Techniques
-Template: general/json
-save_as: software/S0232/S0232-enterprise-layer.json
-json: {"description": "Enterprise techniques used by HOMEFRY, ATT&CK software S0232 v1.0", "name": "HOMEFRY (S0232)", "domain": "mitre-enterprise", "version": "2.2", "techniques": [{"score": 1, "techniqueID": "T1059", "comment": "HOMEFRY uses a command-line interface.[1]"}, {"score": 1, "techniqueID": "T1003", "comment": "HOMEFRY can perform credential dumping.[1]"}, {"score": 1, "techniqueID": "T1027", "comment": "Some strings in HOMEFRY are obfuscated with XOR x56.[1]"}], "gradient": {"colors": ["#ffffff", "#66b1ff"], "minValue": 0, "maxValue": 1}, "legendItems": [{"label": "used by HOMEFRY", "color": "#66b1ff"}]}

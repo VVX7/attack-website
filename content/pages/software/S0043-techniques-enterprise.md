@@ -1,4 +1,0 @@
-Title: enterprise Techniques
-Template: general/json
-save_as: software/S0043/S0043-enterprise-layer.json
-json: {"description": "Enterprise techniques used by BUBBLEWRAP, ATT&CK software S0043 v1.0", "name": "BUBBLEWRAP (S0043)", "domain": "mitre-enterprise", "version": "2.2", "techniques": [{"score": 1, "techniqueID": "T1071", "comment": "BUBBLEWRAP can communicate using HTTP or HTTPS.[1]"}, {"score": 1, "techniqueID": "T1095", "comment": "BUBBLEWRAP can communicate using SOCKS.[1]"}, {"score": 1, "techniqueID": "T1082", "comment": "BUBBLEWRAP collects system information, including the operating system version and hostname.[1]"}], "gradient": {"colors": ["#ffffff", "#66b1ff"], "minValue": 0, "maxValue": 1}, "legendItems": [{"label": "used by BUBBLEWRAP", "color": "#66b1ff"}]}

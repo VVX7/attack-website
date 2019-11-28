@@ -1,4 +1,0 @@
-Title: Without_Adversary_Device_Access_Technique_Matrix-mobile-attack
-Template: general/redirect-index
-RedirectLink: /matrices/mobile
-save_as: mobile/index.php/Without_Adversary_Device_Access_Technique_Matrix/index.html

@@ -1,4 +1,0 @@
-Title: enterprise Techniques
-Template: general/json
-save_as: groups/G0029/G0029-enterprise-layer.json
-json: {"description": "Enterprise techniques used by Scarlet Mimic, ATT&CK group G0029 v1.1", "name": "Scarlet Mimic (G0029)", "domain": "mitre-enterprise", "version": "2.2", "techniques": [{"score": 1, "techniqueID": "T1036", "comment": "Scarlet Mimic has used the left-to-right override character in self-extracting RAR archive spearphishing attachment file names.[1]"}], "gradient": {"colors": ["#ffffff", "#66b1ff"], "minValue": 0, "maxValue": 1}, "legendItems": [{"label": "used by Scarlet Mimic", "color": "#66b1ff"}]}
