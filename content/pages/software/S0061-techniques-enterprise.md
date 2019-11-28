@@ -1,0 +1,4 @@
+Title: enterprise Techniques
+Template: general/json
+save_as: software/S0061/S0061-enterprise-layer.json
+json: {"description": "Enterprise techniques used by HDoor, ATT&CK software S0061 v1.0", "name": "HDoor (S0061)", "domain": "mitre-enterprise", "version": "2.2", "techniques": [{"score": 1, "techniqueID": "T1089", "comment": "HDoor kills anti-virus found on the victim.[1]"}, {"score": 1, "techniqueID": "T1046", "comment": "HDoor scans to identify open ports on the victim.[1]"}], "gradient": {"colors": ["#ffffff", "#66b1ff"], "minValue": 0, "maxValue": 1}, "legendItems": [{"label": "used by HDoor", "color": "#66b1ff"}]}

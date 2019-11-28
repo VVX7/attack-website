@@ -1,0 +1,4 @@
+Title: Deprecated_Techniques-pre-attack
+Template: general/redirect-index
+RedirectLink: /techniques/pre
+save_as: pre-attack/index.php/Deprecated_Techniques/index.html

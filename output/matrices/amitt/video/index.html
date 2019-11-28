@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+        <!-- insert analytics here-->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel='shortcut icon' href='/theme/favicon.ico' type='image/x-icon'>
+        <title>Matrix - AM!TT | MITRE ATT&CK&trade;</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='/theme/style/bootstrap.min.css' />
+        <link rel='stylesheet' href='/theme/style/bootstrap-glyphicon.min.css' />
+        <link rel="stylesheet" type="text/css" href="/theme/style.min.css?c8307d1a">
+</head>
+
+<body>
+<!--stopindex-->
+<header>
+    
+        <nav class='navbar navbar-expand-lg navbar-dark fixed-top'>
+            <a class='navbar-brand' href='/'><img src="/theme/images/mitre_attack.png" height="50px"/></a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse'
+                    aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon' onclick="search('')"></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarCollapse'>
+                <ul class='nav nav-tabs ml-auto'>
+                            <li class="nav-item"><a href="/matrices/"  class="nav-link active" ><b>Matrices</b></a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/tactics/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Tactics</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/tactics/amitt">AM!TT</a>
+                                            <a class="dropdown-item" href="/tactics/pre">PRE-ATT&CK</a>
+                                            <a class="dropdown-item" href="/tactics/enterprise">Enterprise</a>
+                                            <a class="dropdown-item" href="/tactics/mobile">Mobile</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/techniques/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Techniques</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/techniques/amitt">AM!TT</a>
+                                            <a class="dropdown-item" href="/techniques/pre">PRE-ATT&CK</a>
+                                            <a class="dropdown-item" href="/techniques/enterprise">Enterprise</a>
+                                            <a class="dropdown-item" href="/techniques/mobile">Mobile</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/mitigations/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Mitigations</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/mitigations/amitt">AM!TT</a>
+                                            <a class="dropdown-item" href="/mitigations/enterprise">Enterprise</a>
+                                            <a class="dropdown-item" href="/mitigations/mobile">Mobile</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="/groups/"  class="nav-link" ><b>Groups</b></a></li>
+                            <li class="nav-item"><a href="/software/"  class="nav-link" ><b>Software</b></a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/resources/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Resources</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/resources/">General Information</a>
+                                    <a class="dropdown-item" href="/resources/getting-started/">Getting Started</a>
+                                    <a class="dropdown-item" href="/resources/attackcon/">ATT&CKcon</a>
+                                    <a class="dropdown-item" href="/resources/working-with-attack/">Working with ATT&CK</a>
+                                    <a class="dropdown-item" href="/resources/faq/">FAQ</a>
+                                    <a class="dropdown-item" href="/resources/updates/">Updates</a>
+                                    <a class="dropdown-item" href="/resources/previous-versions/">Previous Versions</a>
+                                    <a class="dropdown-item" href="/resources/related-projects/">Related Projects</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="https://medium.com/mitre-attack/" target="_blank"  class="nav-link" ><b>Blog</b>&nbsp;<img src="/theme/images/external-site.svg"
+                                                                                                               alt="External site" class="external-icon" /></a></li>
+                            <li class="nav-item"><a href="/resources/contribute"  class="nav-link" ><b>Contribute</b></a></li>
+                </ul>
+                <ul class='navbar-nav flex-row d-md-flex float-right'>
+                    <li>
+                        <form class='form-inline pl-2'>
+                            <input class='form-control' type='text' placeholder='Search site' aria-label='Search' id="search"
+                                   autocomplete="off">
+                        </form>
+                        <div class="search-results"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </header>
+        <!-- don't edit or remove the line below even though it's commented out, it gets parsed and replaced by the previous-versions feature -->
+        <!-- !previous versions banner! -->
+        <!--startindex-->
+<div id='content'>    <div class='container-fluid'>
+        <div class='row'>
+ 
+             
+            <div class="nav flex-column col-xl-2 col-lg-3 col-md-3  sidebar nav pt-5 pb-3 pl-3 border-right" id="v-tab" role="tablist" aria-orientation="vertical">
+<!--stopindex-->
+    <span class="heading" id="v-home-tab" aria-selected="false">MATRICES</span>
+
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="pre-pre">
+                <a href="/matrices/pre/">PRE-ATT&CK</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="enterprise">
+                <a href="/matrices/enterprise/">Enterprise</a>
+            <div class="expand-button collapsed" id="enterprise-header" data-toggle="collapse" data-target="#enterprise-body" aria-expanded="false" aria-controls="#enterprise-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="enterprise-body" aria-labelledby="enterprise-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="enterprise-windows">
+                <a href="/matrices/enterprise/windows/">Windows</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="enterprise-macos">
+                <a href="/matrices/enterprise/macos/">macOS</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="enterprise-linux">
+                <a href="/matrices/enterprise/linux/">Linux</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="enterprise-cloud">
+                <a href="/matrices/enterprise/cloud/">Cloud</a>
+            <div class="expand-button collapsed" id="enterprise-cloud-header" data-toggle="collapse" data-target="#enterprise-cloud-body" aria-expanded="false" aria-controls="#enterprise-cloud-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="enterprise-cloud-body" aria-labelledby="enterprise-cloud-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="enterprise-cloud-aws">
+                <a href="/matrices/enterprise/cloud/aws/">AWS</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="enterprise-cloud-gcp">
+                <a href="/matrices/enterprise/cloud/gcp/">GCP</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="enterprise-cloud-azure">
+                <a href="/matrices/enterprise/cloud/azure/">Azure</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="enterprise-cloud-office">
+                <a href="/matrices/enterprise/cloud/office365/">Office 365</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="enterprise-cloud-azure">
+                <a href="/matrices/enterprise/cloud/azuread/">Azure AD</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="enterprise-cloud-saas">
+                <a href="/matrices/enterprise/cloud/saas/">SaaS</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="am!tt">
+                <a href="/matrices/amitt/">AM!TT</a>
+            <div class="expand-button collapsed" id="am!tt-header" data-toggle="collapse" data-target="#am!tt-body" aria-expanded="false" aria-controls="#am!tt-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="am!tt-body" aria-labelledby="am!tt-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-advertising">
+                <a href="/matrices/amitt/advertising/">Advertising</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-audio">
+                <a href="/matrices/amitt/audio/">Audio</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-augmented">
+                <a href="/matrices/amitt/augmented_reality/">Augmented Reality</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-digital">
+                <a href="/matrices/amitt/digital_publication/">Digital Publication</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-interactive">
+                <a href="/matrices/amitt/interactive_media/">Interactive Media</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-mobile">
+                <a href="/matrices/amitt/mobile/">Mobile</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-physical">
+                <a href="/matrices/amitt/physical/">Physical</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-physical">
+                <a href="/matrices/amitt/physical_publication/">Physical Publication</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-social">
+                <a href="/matrices/amitt/social_media/">Social Media</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head active" id="am!tt-video">
+                <a href="/matrices/amitt/video/">Video</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="am!tt-video">
+                <a href="/matrices/amitt/video_game/">Video Game</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="mobile">
+                <a href="/matrices/mobile/">Mobile</a>
+            <div class="expand-button collapsed" id="mobile-header" data-toggle="collapse" data-target="#mobile-body" aria-expanded="false" aria-controls="#mobile-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="mobile-body" aria-labelledby="mobile-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="mobile-android">
+                <a href="/matrices/mobile/android/">Android</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="mobile-ios">
+                <a href="/matrices/mobile/ios/">iOS</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+  
+<!--startindex-->
+            </div>
+             
+            <div class="tab-content col-xl-10 col-lg-9 col-md-9 pt-4" id="v-tabContent">
+                <div class="tab-pane fade show active" id="v-attckmatrix" role="tabpanel" aria-labelledby="v-attckmatrix-tab">
+<!--stopindex-->
+    <div class="row">
+        <div class="col-md-9">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/matrices/amitt/">Matrices</a></li>
+                    <li class="breadcrumb-item">Video</li>
+            </ol>
+        </div>
+        <div class="col">
+            <span class="h3 mt-3 float-right">
+                <a href="https://vvx7.io/posts/2019/10/amtt-navigator/" class="btn btn-navy" target="_blank">Launch the AM&excl;TT Navigator <img src="/theme/images/external-link.svg" width="10"></a>
+            </span>
+        </div>
+    </div>
+    <div class="tab-pane fade show active" id="v-attckmatrix" role="tabpanel" aria-labelledby="v-attckmatrix-tab">
+        <div class="container-fluid">
+
+            <h1>Video Matrix</h1>             
+
+            <p>
+                Film, Television, YouTube.
+                        The Matrix contains information for the Video platform.
+            </p>
+            
+
+                <span class="fs-s">Last Modified: 2019-11-27 17:34:50.615463</span>
+                <div class="overflow-x-auto">
+                    <table class='table table-matrix'>
+                            <thead class='matrix-header'>
+                            <tr>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA01/">Strategic Planning</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA02/">Objective Planning</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA03/">Develop People</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA04/">Develop Networks</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA05/">Microtargeting</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA06/">Develop Content</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA07/">Channel Selection</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA08/">Pump Priming</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA09/">Exposure</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA10/">Go Physical</a>
+                                        </th>
+                                        <th scope='col' class="border">
+                                            <a class="matrix-tactics-url" href="/tactics/TA11/">Persistence</a>
+                                        </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-5Ds (dismiss, distort, distract, dismay, divide)-strategic planning-tab" href="/techniques/T0001">5Ds (dismiss, distort, distract, dismay, divide)</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Center of Gravity Analysis-objective planning-tab" href="/techniques/T0005">Center of Gravity Analysis</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create fake experts-develop people-tab" href="/techniques/T0009">Create fake experts</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create fake websites-develop networks-tab" href="/techniques/T0013">Create fake websites</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Clickbait-microtargeting-tab" href="/techniques/T0016">Clickbait</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Adapt existing narratives-develop content-tab" href="/techniques/T0027">Adapt existing narratives</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Backstop personas-channel selection-tab" href="/techniques/T0030">Backstop personas</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Bait legitimate influencers-pump priming-tab" href="/techniques/T0039">Bait legitimate influencers</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Cheerleading domestic social media ops-exposure-tab" href="/techniques/T0050">Cheerleading domestic social media ops</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Organise remote rallies and events-go physical-tab" href="/techniques/T0057">Organise remote rallies and events</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Continue to amplify-persistence-tab" href="/techniques/T0060">Continue to amplify</a>
+                                                </td>
+                                </tr>
+                                <tr>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Competing Narratives-strategic planning-tab" href="/techniques/T0004">Competing Narratives</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create Master Narratives-objective planning-tab" href="/techniques/T0006">Create Master Narratives</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create fake or imposter news sites-develop people-tab" href="/techniques/T0008">Create fake or imposter news sites</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create funding campaigns-develop networks-tab" href="/techniques/T0014">Create funding campaigns</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Paid targeted ads-microtargeting-tab" href="/techniques/T0018">Paid targeted ads</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Conspiracy narratives-develop content-tab" href="/techniques/T0022">Conspiracy narratives</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Facebook-channel selection-tab" href="/techniques/T0037">Facebook</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Demand unsurmountable proof-pump priming-tab" href="/techniques/T0040">Demand unsurmountable proof</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Cow online opinion leaders-exposure-tab" href="/techniques/T0048">Cow online opinion leaders</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Sell merchandising-go physical-tab" href="/techniques/T0061">Sell merchandising</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Legacy web content-persistence-tab" href="/techniques/T0058">Legacy web content</a>
+                                                </td>
+                                </tr>
+                                <tr>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Facilitate State Propaganda-strategic planning-tab" href="/techniques/T0002">Facilitate State Propaganda</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create fake Social Media Profiles / Pages / Groups-develop people-tab" href="/techniques/T0007">Create fake Social Media Profiles / Pages / Groups</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create hashtag-develop networks-tab" href="/techniques/T0015">Create hashtag</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Promote online funding-microtargeting-tab" href="/techniques/T0017">Promote online funding</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create competing narratives-develop content-tab" href="/techniques/T0028">Create competing narratives</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Instagram-channel selection-tab" href="/techniques/T0033">Instagram</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Deny involvement-pump priming-tab" href="/techniques/T0041">Deny involvement</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Dedicated channels disseminate information pollution-exposure-tab" href="/techniques/T0056">Dedicated channels disseminate information pollution</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Play the long game-persistence-tab" href="/techniques/T0059">Play the long game</a>
+                                                </td>
+                                </tr>
+                                <tr>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Leverage Existing Narratives-strategic planning-tab" href="/techniques/T0003">Leverage Existing Narratives</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Cultivate ignorant agents-develop networks-tab" href="/techniques/T0010">Cultivate ignorant agents</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create fake research-develop content-tab" href="/techniques/T0026">Create fake research</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-LinkedIn-channel selection-tab" href="/techniques/T0034">LinkedIn</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Kernel of Truth-pump priming-tab" href="/techniques/T0042">Kernel of Truth</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Fabricate social media comment-exposure-tab" href="/techniques/T0051">Fabricate social media comment</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                </tr>
+                                <tr>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Hijack legitimate account-develop networks-tab" href="/techniques/T0011">Hijack legitimate account</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Create fake videos and images-develop content-tab" href="/techniques/T0024">Create fake videos and images</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Manipulate online polls-channel selection-tab" href="/techniques/T0029">Manipulate online polls</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Search Engine Optimization-pump priming-tab" href="/techniques/T0046">Search Engine Optimization</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Flooding-exposure-tab" href="/techniques/T0049">Flooding</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                </tr>
+                                <tr>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Use concealment-develop networks-tab" href="/techniques/T0012">Use concealment</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Distort facts-develop content-tab" href="/techniques/T0023">Distort facts</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Pinterest-channel selection-tab" href="/techniques/T0035">Pinterest</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Seed distortions-pump priming-tab" href="/techniques/T0044">Seed distortions</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Muzzle social media as a political force-exposure-tab" href="/techniques/T0047">Muzzle social media as a political force</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                </tr>
+                                <tr>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Generate information pollution-develop content-tab" href="/techniques/T0019">Generate information pollution</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Reddit-channel selection-tab" href="/techniques/T0032">Reddit</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Use fake experts-pump priming-tab" href="/techniques/T0045">Use fake experts</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Tertiary sites amplify news-exposure-tab" href="/techniques/T0052">Tertiary sites amplify news</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                </tr>
+                                <tr>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Leak altered documents-develop content-tab" href="/techniques/T0025">Leak altered documents</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Twitter-channel selection-tab" href="/techniques/T0038">Twitter</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Use SMS/ WhatsApp/ Chat apps-pump priming-tab" href="/techniques/T0043">Use SMS/ WhatsApp/ Chat apps</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Twitter bots amplify-exposure-tab" href="/techniques/T0054">Twitter bots amplify</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                </tr>
+                                <tr>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Memes-develop content-tab" href="/techniques/T0021">Memes</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-WhatsApp-channel selection-tab" href="/techniques/T0036">WhatsApp</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Twitter trolls amplify and manipulate-exposure-tab" href="/techniques/T0053">Twitter trolls amplify and manipulate</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                </tr>
+                                <tr>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Trial content-develop content-tab" href="/techniques/T0020">Trial content</a>
+                                                </td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-YouTube-channel selection-tab" href="/techniques/T0031">YouTube</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="border">
+                                                    <a class="technique-mapping" id="v-Use hashtag-exposure-tab" href="/techniques/T0055">Use hashtag</a>
+                                                </td>
+                                                <td class="no-border"></td>
+                                                <td class="no-border"></td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+<!--startindex-->
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+<!--stopindex-->
+<footer class="footer p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 col-sm-4 col-md-3">  
+                <div class="footer-center-responsive my-auto">
+                    <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
+                        <img src="/theme/images/mitrelogowhiteontrans.gif" class="mitre-logo-wtrans">
+                    </a>
+                </div>
+            </div>
+            <div class="col-2 col-sm-2 footer-responsive-break"></div>
+            <div class="col-6 col-sm-6 text-center">  
+                <p>
+                    Copyright © 2015-2019, The MITRE Corporation. MITRE ATT&CK and ATT&CK are trademarks of The MITRE Corporation.
+                </p>
+                <div class="row">
+                    <div class="col text-right">
+                        <small>
+                            <a href="/resources/privacy" class="footer-link">Privacy Policy</a>
+                        </small>
+                    </div>
+                    <div class="col text-left">
+                        <small>
+                            <a href="/resources/terms-of-use" class="footer-link">Terms of Use</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 p-2 footer-responsive-break"></div>
+            <div class="col">
+                <div class="footer-float-right-responsive">
+                    <div class="mb-1">
+                        <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
+                            <!-- <i class="fa fa-twitter"></i> -->
+                            <img src="/theme/images/twitter.png" class="mr-1 twitter-icon">
+                            <b>@MITREattack</b>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/contact" class="btn btn-primary w-100">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+        <!--SCRIPTS-->
+    <script src="/theme/scripts/jquery-3.2.1.min.js"></script>
+    <script src="/theme/scripts/popper.min.js"></script>
+    <script src="/theme/scripts/bootstrap.min.js"></script>
+    <script src="/theme/scripts/site.js"></script>
+    <script src="/theme/scripts/lunr-2.3.3.js"></script>
+    <script src="/theme/scripts/search.js"></script>
+    <script src="/theme/scripts/index.js"></script>
+
+    <!--SCRIPTS-->
+    <script src="/theme/scripts/navigation.js"></script>
+</body>
+
+</html>
+<!--startindex-->

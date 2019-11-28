@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+        <!-- insert analytics here-->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel='shortcut icon' href='/theme/favicon.ico' type='image/x-icon'>
+        <title>Develop Networks | MITRE ATT&CK&trade;</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='/theme/style/bootstrap.min.css' />
+        <link rel='stylesheet' href='/theme/style/bootstrap-glyphicon.min.css' />
+        <link rel="stylesheet" type="text/css" href="/theme/style.min.css?c8307d1a">
+</head>
+
+<body>
+<!--stopindex-->
+<header>
+    
+        <nav class='navbar navbar-expand-lg navbar-dark fixed-top'>
+            <a class='navbar-brand' href='/'><img src="/theme/images/mitre_attack.png" height="50px"/></a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse'
+                    aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon' onclick="search('')"></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarCollapse'>
+                <ul class='nav nav-tabs ml-auto'>
+                            <li class="nav-item"><a href="/matrices/"  class="nav-link" ><b>Matrices</b></a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/tactics/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Tactics</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/tactics/amitt">AM!TT</a>
+                                            <a class="dropdown-item" href="/tactics/pre">PRE-ATT&CK</a>
+                                            <a class="dropdown-item" href="/tactics/enterprise">Enterprise</a>
+                                            <a class="dropdown-item" href="/tactics/mobile">Mobile</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/techniques/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Techniques</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/techniques/amitt">AM!TT</a>
+                                            <a class="dropdown-item" href="/techniques/pre">PRE-ATT&CK</a>
+                                            <a class="dropdown-item" href="/techniques/enterprise">Enterprise</a>
+                                            <a class="dropdown-item" href="/techniques/mobile">Mobile</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/mitigations/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Mitigations</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/mitigations/amitt">AM!TT</a>
+                                            <a class="dropdown-item" href="/mitigations/enterprise">Enterprise</a>
+                                            <a class="dropdown-item" href="/mitigations/mobile">Mobile</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="/groups/"  class="nav-link" ><b>Groups</b></a></li>
+                            <li class="nav-item"><a href="/software/"  class="nav-link" ><b>Software</b></a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/resources/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Resources</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/resources/">General Information</a>
+                                    <a class="dropdown-item" href="/resources/getting-started/">Getting Started</a>
+                                    <a class="dropdown-item" href="/resources/attackcon/">ATT&CKcon</a>
+                                    <a class="dropdown-item" href="/resources/working-with-attack/">Working with ATT&CK</a>
+                                    <a class="dropdown-item" href="/resources/faq/">FAQ</a>
+                                    <a class="dropdown-item" href="/resources/updates/">Updates</a>
+                                    <a class="dropdown-item" href="/resources/previous-versions/">Previous Versions</a>
+                                    <a class="dropdown-item" href="/resources/related-projects/">Related Projects</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="https://medium.com/mitre-attack/" target="_blank"  class="nav-link" ><b>Blog</b>&nbsp;<img src="/theme/images/external-site.svg"
+                                                                                                               alt="External site" class="external-icon" /></a></li>
+                            <li class="nav-item"><a href="/resources/contribute"  class="nav-link" ><b>Contribute</b></a></li>
+                </ul>
+                <ul class='navbar-nav flex-row d-md-flex float-right'>
+                    <li>
+                        <form class='form-inline pl-2'>
+                            <input class='form-control' type='text' placeholder='Search site' aria-label='Search' id="search"
+                                   autocomplete="off">
+                        </form>
+                        <div class="search-results"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </header>
+        <!-- don't edit or remove the line below even though it's commented out, it gets parsed and replaced by the previous-versions feature -->
+        <!-- !previous versions banner! -->
+        <!--startindex-->
+<div id='content'>    <div class='container-fluid'>
+        <div class='row'>
+ 
+             
+            <div class="nav flex-column col-xl-2 col-lg-3 col-md-3  sidebar nav pt-5 pb-3 pl-3 border-right" id="v-tab" role="tablist" aria-orientation="vertical">
+<!--stopindex-->
+            <button class="btn btn-default dropdown-toggle heading-dropdown mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM!TT</button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/tactics/enterprise">ENTERPRISE</a>
+        <a class="dropdown-item" href="/tactics/mobile">MOBILE</a>
+        <a class="dropdown-item" href="/tactics/pre">PRE-ATT&CK</a>
+        <a class="dropdown-item" href="/tactics/pre">AM!TT</a>
+    </div>
+    <div class="group-nav-desktop-view">
+        <span class="heading" id="v-home-tab" aria-selected="false">TACTICS</span>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="0-0">
+                <a href="/tactics/amitt/">Overview</a>
+            </div>
+</div>
+
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Strategic Planning-Strategic Planning">
+                <a href="/tactics/TA01/">Strategic Planning</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Objective Planning-Objective Planning">
+                <a href="/tactics/TA02/">Objective Planning</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Develop People-Develop People">
+                <a href="/tactics/TA03/">Develop People</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head active" id="Develop Networks-Develop Networks">
+                <a href="/tactics/TA04/">Develop Networks</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Microtargeting-Microtargeting">
+                <a href="/tactics/TA05/">Microtargeting</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Develop Content-Develop Content">
+                <a href="/tactics/TA06/">Develop Content</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Channel Selection-Channel Selection">
+                <a href="/tactics/TA07/">Channel Selection</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Pump Priming-Pump Priming">
+                <a href="/tactics/TA08/">Pump Priming</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Exposure-Exposure">
+                <a href="/tactics/TA09/">Exposure</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Go Physical-Go Physical">
+                <a href="/tactics/TA10/">Go Physical</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Persistence-Persistence">
+                <a href="/tactics/TA11/">Persistence</a>
+            </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="Measure Effectiveness-Measure Effectiveness">
+                <a href="/tactics/TA12/">Measure Effectiveness</a>
+            </div>
+</div>
+
+
+    </div>
+<!--startindex-->
+            </div>
+             
+            <div class="tab-content col-xl-10 col-lg-9 col-md-9 pt-4" id="v-tabContent">
+                <div class="tab-pane fade show active" id="v-attckmatrix" role="tabpanel" aria-labelledby="v-attckmatrix-tab">
+    
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/tactics/amitt">Tactics</a></li>
+            <li class="breadcrumb-item"><a href="/tactics/amitt">AM!TT</a></li>
+        <li class="breadcrumb-item">Develop Networks</li>
+    </ol>
+    <div class="tab-pane fade show active" id="v-" role="tabpanel" aria-labelledby="v--tab"></div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid">
+                    <h1>
+                        Develop Networks
+                    </h1>
+                    <div class="row">
+                        <div class="col-md-8 description-body">
+                            <p>Develop online and offline communities and transmission methods and cultivate assets and unwitting agents</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-data"><span class="h5 card-title">ID:</span> TA04</div>                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="pt-3" id ="techniques">Techniques</h2><h6 class="table-object-count">Techniques: 6</h6>
+                    <table class="table table-bordered table-alternate mt-2">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Create fake websites-develop networks-tab" href="/techniques/T0013"> T0013 </a>
+                                    </td>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Create fake websites-develop networks-tab" href="/techniques/T0013"> Create fake websites </a>
+                                    </td>
+                                    <td>
+                                        <p>Create media assets to support fake organizations (e.g. think tank), people (e.g. experts) and/or serve as sites to distribute malware/launch phishing operations.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Create funding campaigns-develop networks-tab" href="/techniques/T0014"> T0014 </a>
+                                    </td>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Create funding campaigns-develop networks-tab" href="/techniques/T0014"> Create funding campaigns </a>
+                                    </td>
+                                    <td>
+                                        <p>Generate revenue through online funding campaigns. e.g. Gather data, advance credible persona via Gofundme; Patreon; or via fake website connecting via PayPal or Stripe. (Example 2016) #VaccinateUS Gofundme campaigns to pay for Targetted facebook ads (Larry Cook, targetting Washington State mothers, $1,776 to boost posts over 9 months).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Create hashtag-develop networks-tab" href="/techniques/T0015"> T0015 </a>
+                                    </td>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Create hashtag-develop networks-tab" href="/techniques/T0015"> Create hashtag </a>
+                                    </td>
+                                    <td>
+                                        <p>Many incident-based campaigns will create a hashtag to promote their fabricated event (e.g. #ColumbianChemicals to promote a fake story about a chemical spill in Louisiana). </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Cultivate ignorant agents-develop networks-tab" href="/techniques/T0010"> T0010 </a>
+                                    </td>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Cultivate ignorant agents-develop networks-tab" href="/techniques/T0010"> Cultivate ignorant agents </a>
+                                    </td>
+                                    <td>
+                                        <p>Cultivate propagandists for a cause, the goals of which are not fully comprehended, and who are used cynically by the leaders of the cause. Independent actors use social media and specialised web sites to strategically reinforce and spread messages compatible with their own. Their networks are infiltrated and used by state media disinformation organisations to amplify the state’s own disinformation strategies against target populations. Many are traffickers in conspiracy theories or hoaxes, unified by a suspicion of Western governments and mainstream media. Their narratives, which appeal to leftists hostile to globalism and military intervention and nationalists against immigration, are frequently infiltrated and shaped by state-controlled trolls and altered news items from agencies such as RT and Sputnik. Also know as "useful idiots" or "unwitting agents".</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Hijack legitimate account-develop networks-tab" href="/techniques/T0011"> T0011 </a>
+                                    </td>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Hijack legitimate account-develop networks-tab" href="/techniques/T0011"> Hijack legitimate account </a>
+                                    </td>
+                                    <td>
+                                        <p>Hack or take over legimate accounts to distribute misinformation or damaging content. Examples include Syrian Electronic Army (2013) series of false tweets from a hijacked Associated Press Twitter account claiming that President Barack Obama had been injured in a series of explosions near the White House. The false report caused a temporary plunge of 143 points on the Dow Jones Industrial Average.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Use concealment-develop networks-tab" href="/techniques/T0012"> T0012 </a>
+                                    </td>
+                                    <td>
+                                        <a class="technique-mapping" id="v-Use concealment-develop networks-tab" href="/techniques/T0012"> Use concealment </a>
+                                    </td>
+                                    <td>
+                                        <p>Use anonymous social media profiles. Examples include page or group administrators, masked "whois" website directory data, no bylines connected to news article, no masthead connect to news websites. </p>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+<!--stopindex-->
+<footer class="footer p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 col-sm-4 col-md-3">  
+                <div class="footer-center-responsive my-auto">
+                    <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
+                        <img src="/theme/images/mitrelogowhiteontrans.gif" class="mitre-logo-wtrans">
+                    </a>
+                </div>
+            </div>
+            <div class="col-2 col-sm-2 footer-responsive-break"></div>
+            <div class="col-6 col-sm-6 text-center">  
+                <p>
+                    Copyright © 2015-2019, The MITRE Corporation. MITRE ATT&CK and ATT&CK are trademarks of The MITRE Corporation.
+                </p>
+                <div class="row">
+                    <div class="col text-right">
+                        <small>
+                            <a href="/resources/privacy" class="footer-link">Privacy Policy</a>
+                        </small>
+                    </div>
+                    <div class="col text-left">
+                        <small>
+                            <a href="/resources/terms-of-use" class="footer-link">Terms of Use</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 p-2 footer-responsive-break"></div>
+            <div class="col">
+                <div class="footer-float-right-responsive">
+                    <div class="mb-1">
+                        <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
+                            <!-- <i class="fa fa-twitter"></i> -->
+                            <img src="/theme/images/twitter.png" class="mr-1 twitter-icon">
+                            <b>@MITREattack</b>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/contact" class="btn btn-primary w-100">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+        <!--SCRIPTS-->
+    <script src="/theme/scripts/jquery-3.2.1.min.js"></script>
+    <script src="/theme/scripts/popper.min.js"></script>
+    <script src="/theme/scripts/bootstrap.min.js"></script>
+    <script src="/theme/scripts/site.js"></script>
+    <script src="/theme/scripts/lunr-2.3.3.js"></script>
+    <script src="/theme/scripts/search.js"></script>
+    <script src="/theme/scripts/index.js"></script>
+
+    <!--SCRIPTS-->
+    <script src="/theme/scripts/navigation.js"></script>
+</body>
+
+</html>
+<!--startindex-->

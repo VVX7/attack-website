@@ -1,0 +1,4 @@
+Title: enterprise Techniques
+Template: general/json
+save_as: software/S0100/S0100-enterprise-layer.json
+json: {"description": "Enterprise techniques used by ipconfig, ATT&CK software S0100 v1.0", "name": "ipconfig (S0100)", "domain": "mitre-enterprise", "version": "2.2", "techniques": [{"score": 1, "techniqueID": "T1016", "comment": "ipconfig can be used to display adapter configuration on Windows systems, including information for TCP/IP, DNS, and DHCP."}], "gradient": {"colors": ["#ffffff", "#66b1ff"], "minValue": 0, "maxValue": 1}, "legendItems": [{"label": "used by ipconfig", "color": "#66b1ff"}]}

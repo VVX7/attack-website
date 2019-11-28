@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+        <!-- insert analytics here-->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel='shortcut icon' href='/theme/favicon.ico' type='image/x-icon'>
+        <title>Competing Narratives | MITRE ATT&CK&trade;</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='/theme/style/bootstrap.min.css' />
+        <link rel='stylesheet' href='/theme/style/bootstrap-glyphicon.min.css' />
+        <link rel="stylesheet" type="text/css" href="/theme/style.min.css?c8307d1a">
+</head>
+
+<body>
+<!--stopindex-->
+<header>
+    
+        <nav class='navbar navbar-expand-lg navbar-dark fixed-top'>
+            <a class='navbar-brand' href='/'><img src="/theme/images/mitre_attack.png" height="50px"/></a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse'
+                    aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon' onclick="search('')"></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarCollapse'>
+                <ul class='nav nav-tabs ml-auto'>
+                            <li class="nav-item"><a href="/matrices/"  class="nav-link" ><b>Matrices</b></a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/tactics/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Tactics</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/tactics/amitt">AM!TT</a>
+                                            <a class="dropdown-item" href="/tactics/pre">PRE-ATT&CK</a>
+                                            <a class="dropdown-item" href="/tactics/enterprise">Enterprise</a>
+                                            <a class="dropdown-item" href="/tactics/mobile">Mobile</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/techniques/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Techniques</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/techniques/amitt">AM!TT</a>
+                                            <a class="dropdown-item" href="/techniques/pre">PRE-ATT&CK</a>
+                                            <a class="dropdown-item" href="/techniques/enterprise">Enterprise</a>
+                                            <a class="dropdown-item" href="/techniques/mobile">Mobile</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/mitigations/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Mitigations</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/mitigations/amitt">AM!TT</a>
+                                            <a class="dropdown-item" href="/mitigations/enterprise">Enterprise</a>
+                                            <a class="dropdown-item" href="/mitigations/mobile">Mobile</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="/groups/"  class="nav-link" ><b>Groups</b></a></li>
+                            <li class="nav-item"><a href="/software/"  class="nav-link" ><b>Software</b></a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/resources/" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <b>Resources</b>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/resources/">General Information</a>
+                                    <a class="dropdown-item" href="/resources/getting-started/">Getting Started</a>
+                                    <a class="dropdown-item" href="/resources/attackcon/">ATT&CKcon</a>
+                                    <a class="dropdown-item" href="/resources/working-with-attack/">Working with ATT&CK</a>
+                                    <a class="dropdown-item" href="/resources/faq/">FAQ</a>
+                                    <a class="dropdown-item" href="/resources/updates/">Updates</a>
+                                    <a class="dropdown-item" href="/resources/previous-versions/">Previous Versions</a>
+                                    <a class="dropdown-item" href="/resources/related-projects/">Related Projects</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="https://medium.com/mitre-attack/" target="_blank"  class="nav-link" ><b>Blog</b>&nbsp;<img src="/theme/images/external-site.svg"
+                                                                                                               alt="External site" class="external-icon" /></a></li>
+                            <li class="nav-item"><a href="/resources/contribute"  class="nav-link" ><b>Contribute</b></a></li>
+                </ul>
+                <ul class='navbar-nav flex-row d-md-flex float-right'>
+                    <li>
+                        <form class='form-inline pl-2'>
+                            <input class='form-control' type='text' placeholder='Search site' aria-label='Search' id="search"
+                                   autocomplete="off">
+                        </form>
+                        <div class="search-results"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </header>
+        <!-- don't edit or remove the line below even though it's commented out, it gets parsed and replaced by the previous-versions feature -->
+        <!-- !previous versions banner! -->
+        <!--startindex-->
+<div id='content'>    <div class='container-fluid'>
+        <div class='row'>
+ 
+             
+            <div class="nav flex-column col-xl-2 col-lg-3 col-md-3  sidebar nav pt-5 pb-3 pl-3 border-right" id="v-tab" role="tablist" aria-orientation="vertical">
+<!--stopindex-->
+        <button class="btn btn-default dropdown-toggle heading-dropdown mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM!TT</button>
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/techniques/enterprise">ENTERPRISE</a>
+        <a class="dropdown-item" href="/techniques/mobile">MOBILE</a>
+        <a class="dropdown-item" href="/techniques/pre">PRE-ATT&CK</a>
+    </div>
+    <div id="v-tab" role="tablist" aria-orientation="vertical">
+        <span class="heading" id="v-home-tab" aria-selected="false">TECHNIQUES</span>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="0-0">
+                <a href="/techniques/amitt/">Overview</a>
+            </div>
+</div>
+
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA01">
+                <a href="/tactics/TA01">Strategic Planning</a>
+            <div class="expand-button collapsed" id="TA01-header" data-toggle="collapse" data-target="#TA01-body" aria-expanded="false" aria-controls="#TA01-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA01-body" aria-labelledby="TA01-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA01-T0001">
+                <a href="/techniques/T0001/">5Ds (dismiss, distort, distract, dismay, divide)</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head active" id="TA01-T0004">
+                <a href="/techniques/T0004/">Competing Narratives</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA01-T0002">
+                <a href="/techniques/T0002/">Facilitate State Propaganda</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA01-T0003">
+                <a href="/techniques/T0003/">Leverage Existing Narratives</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA02">
+                <a href="/tactics/TA02">Objective Planning</a>
+            <div class="expand-button collapsed" id="TA02-header" data-toggle="collapse" data-target="#TA02-body" aria-expanded="false" aria-controls="#TA02-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA02-body" aria-labelledby="TA02-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA02-T0005">
+                <a href="/techniques/T0005/">Center of Gravity Analysis</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA02-T0006">
+                <a href="/techniques/T0006/">Create Master Narratives</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA03">
+                <a href="/tactics/TA03">Develop People</a>
+            <div class="expand-button collapsed" id="TA03-header" data-toggle="collapse" data-target="#TA03-body" aria-expanded="false" aria-controls="#TA03-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA03-body" aria-labelledby="TA03-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA03-T0009">
+                <a href="/techniques/T0009/">Create fake experts</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA03-T0008">
+                <a href="/techniques/T0008/">Create fake or imposter news sites</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA03-T0007">
+                <a href="/techniques/T0007/">Create fake Social Media Profiles / Pages / Groups</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA04">
+                <a href="/tactics/TA04">Develop Networks</a>
+            <div class="expand-button collapsed" id="TA04-header" data-toggle="collapse" data-target="#TA04-body" aria-expanded="false" aria-controls="#TA04-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA04-body" aria-labelledby="TA04-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA04-T0013">
+                <a href="/techniques/T0013/">Create fake websites</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA04-T0014">
+                <a href="/techniques/T0014/">Create funding campaigns</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA04-T0015">
+                <a href="/techniques/T0015/">Create hashtag</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA04-T0010">
+                <a href="/techniques/T0010/">Cultivate ignorant agents</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA04-T0011">
+                <a href="/techniques/T0011/">Hijack legitimate account</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA04-T0012">
+                <a href="/techniques/T0012/">Use concealment</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA05">
+                <a href="/tactics/TA05">Microtargeting</a>
+            <div class="expand-button collapsed" id="TA05-header" data-toggle="collapse" data-target="#TA05-body" aria-expanded="false" aria-controls="#TA05-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA05-body" aria-labelledby="TA05-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA05-T0016">
+                <a href="/techniques/T0016/">Clickbait</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA05-T0018">
+                <a href="/techniques/T0018/">Paid targeted ads</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA05-T0017">
+                <a href="/techniques/T0017/">Promote online funding</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA06">
+                <a href="/tactics/TA06">Develop Content</a>
+            <div class="expand-button collapsed" id="TA06-header" data-toggle="collapse" data-target="#TA06-body" aria-expanded="false" aria-controls="#TA06-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA06-body" aria-labelledby="TA06-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0027">
+                <a href="/techniques/T0027/">Adapt existing narratives</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0022">
+                <a href="/techniques/T0022/">Conspiracy narratives</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0028">
+                <a href="/techniques/T0028/">Create competing narratives</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0026">
+                <a href="/techniques/T0026/">Create fake research</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0024">
+                <a href="/techniques/T0024/">Create fake videos and images</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0023">
+                <a href="/techniques/T0023/">Distort facts</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0019">
+                <a href="/techniques/T0019/">Generate information pollution</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0025">
+                <a href="/techniques/T0025/">Leak altered documents</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0021">
+                <a href="/techniques/T0021/">Memes</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA06-T0020">
+                <a href="/techniques/T0020/">Trial content</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA07">
+                <a href="/tactics/TA07">Channel Selection</a>
+            <div class="expand-button collapsed" id="TA07-header" data-toggle="collapse" data-target="#TA07-body" aria-expanded="false" aria-controls="#TA07-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA07-body" aria-labelledby="TA07-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0030">
+                <a href="/techniques/T0030/">Backstop personas</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0037">
+                <a href="/techniques/T0037/">Facebook</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0033">
+                <a href="/techniques/T0033/">Instagram</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0034">
+                <a href="/techniques/T0034/">LinkedIn</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0029">
+                <a href="/techniques/T0029/">Manipulate online polls</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0035">
+                <a href="/techniques/T0035/">Pinterest</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0032">
+                <a href="/techniques/T0032/">Reddit</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0038">
+                <a href="/techniques/T0038/">Twitter</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0036">
+                <a href="/techniques/T0036/">WhatsApp</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA07-T0031">
+                <a href="/techniques/T0031/">YouTube</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA08">
+                <a href="/tactics/TA08">Pump Priming</a>
+            <div class="expand-button collapsed" id="TA08-header" data-toggle="collapse" data-target="#TA08-body" aria-expanded="false" aria-controls="#TA08-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA08-body" aria-labelledby="TA08-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA08-T0039">
+                <a href="/techniques/T0039/">Bait legitimate influencers</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA08-T0040">
+                <a href="/techniques/T0040/">Demand unsurmountable proof</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA08-T0041">
+                <a href="/techniques/T0041/">Deny involvement</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA08-T0042">
+                <a href="/techniques/T0042/">Kernel of Truth</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA08-T0046">
+                <a href="/techniques/T0046/">Search Engine Optimization</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA08-T0044">
+                <a href="/techniques/T0044/">Seed distortions</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA08-T0045">
+                <a href="/techniques/T0045/">Use fake experts</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA08-T0043">
+                <a href="/techniques/T0043/">Use SMS/ WhatsApp/ Chat apps</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA09">
+                <a href="/tactics/TA09">Exposure</a>
+            <div class="expand-button collapsed" id="TA09-header" data-toggle="collapse" data-target="#TA09-body" aria-expanded="false" aria-controls="#TA09-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA09-body" aria-labelledby="TA09-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0050">
+                <a href="/techniques/T0050/">Cheerleading domestic social media ops</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0048">
+                <a href="/techniques/T0048/">Cow online opinion leaders</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0056">
+                <a href="/techniques/T0056/">Dedicated channels disseminate information pollution</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0051">
+                <a href="/techniques/T0051/">Fabricate social media comment</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0049">
+                <a href="/techniques/T0049/">Flooding</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0047">
+                <a href="/techniques/T0047/">Muzzle social media as a political force</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0052">
+                <a href="/techniques/T0052/">Tertiary sites amplify news</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0054">
+                <a href="/techniques/T0054/">Twitter bots amplify</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0053">
+                <a href="/techniques/T0053/">Twitter trolls amplify and manipulate</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA09-T0055">
+                <a href="/techniques/T0055/">Use hashtag</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA10">
+                <a href="/tactics/TA10">Go Physical</a>
+            <div class="expand-button collapsed" id="TA10-header" data-toggle="collapse" data-target="#TA10-body" aria-expanded="false" aria-controls="#TA10-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA10-body" aria-labelledby="TA10-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA10-T0057">
+                <a href="/techniques/T0057/">Organise remote rallies and events</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA10-T0061">
+                <a href="/techniques/T0061/">Sell merchandising</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+        <div class="sidenav-head " id="TA11">
+                <a href="/tactics/TA11">Persistence</a>
+            <div class="expand-button collapsed" id="TA11-header" data-toggle="collapse" data-target="#TA11-body" aria-expanded="false" aria-controls="#TA11-body"></div>
+
+        </div>
+        <div class="sidenav-body collapse" id="TA11-body" aria-labelledby="TA11-header">
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA11-T0060">
+                <a href="/techniques/T0060/">Continue to amplify</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA11-T0058">
+                <a href="/techniques/T0058/">Legacy web content</a>
+            </div>
+</div>
+
+                    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA11-T0059">
+                <a href="/techniques/T0059/">Play the long game</a>
+            </div>
+</div>
+
+        </div>
+</div>
+
+    
+
+<div class="sidenav">
+            <div class="sidenav-head" id="TA12-TA12">
+                <a href="/tactics/TA12">Measure Effectiveness</a>
+            </div>
+</div>
+
+  
+    </div>
+<!--startindex-->
+            </div>
+             
+            <div class="tab-content col-xl-10 col-lg-9 col-md-9 pt-4" id="v-tabContent">
+                <div class="tab-pane fade show active" id="v-attckmatrix" role="tabpanel" aria-labelledby="v-attckmatrix-tab">
+    
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/techniques/amitt">Techniques</a></li>
+            <li class="breadcrumb-item"><a href="/techniques/amitt">AM!TT</a></li>
+        <li class="breadcrumb-item">Competing Narratives</li>
+    </ol>
+    <div class="tab-pane fade show active" id="v-" role="tabpanel" aria-labelledby="v--tab"></div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container-fluid">
+                    <h1>
+                        Competing Narratives
+                    </h1>            
+                    <div class="row">
+                            <div class="col-md-8 description-body">
+                                <p>Advance competing narratives connected to same issue ie: on one hand deny incident while at same time expresses dismiss. MH17 (example) "Russian Foreign Ministry again claimed that "absolutely groundless accusations are put forward against the Russian side, which are aimed at discrediting Russia in the eyes of the international community" (deny); "The Dutch MH17 investigation is biased, anti-Russian and factually inaccurate" (dismiss). </p><p>Suppressing or discouraging narratives already spreading requires an alternative. The most simple set of narrative techniques in response would be the construction and promotion of contradictory alternatives centered on denial, deflection, dismissal, counter-charges, excessive standards of proof, bias in prohibition or enforcement, and so on.</p><p>These competing narratives allow loyalists cover, but are less compelling to opponents and fence-sitters than campaigns built around existing narratives or highly explanatory master narratives. Competing narratives, as such, are especially useful in the "firehose of misinformation" approach.</p>
+                            </div>
+                    
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                        <div class="card-data"><span class="h5 card-title">ID:&nbsp;</span>T0004</div>
+                                        <div class="card-data"><span class="h5 card-title">Tactic:</span>
+                                                Strategic Planning                                        </div>
+                                        <div class="card-data"><span class="h5 card-title">Platform:&nbsp;</span>Advertising, Audio, Augmented Reality, Digital Publication, Interactive Media, Mobile, Physical, Physical Publication, Social Media, Video, Video Game</div>
+                                        <div class="card-data"><span class="h5 card-title">Version:&nbsp;</span>1.0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <h2 class="pt-3" id ="mitigations">Mitigations</h2>
+                            <p>
+                                This type of attack technique cannot be easily mitigated with preventive controls since
+                                it is based on the abuse of system features.
+                            </p>
+
+   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+<!--stopindex-->
+<footer class="footer p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 col-sm-4 col-md-3">  
+                <div class="footer-center-responsive my-auto">
+                    <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
+                        <img src="/theme/images/mitrelogowhiteontrans.gif" class="mitre-logo-wtrans">
+                    </a>
+                </div>
+            </div>
+            <div class="col-2 col-sm-2 footer-responsive-break"></div>
+            <div class="col-6 col-sm-6 text-center">  
+                <p>
+                    Copyright © 2015-2019, The MITRE Corporation. MITRE ATT&CK and ATT&CK are trademarks of The MITRE Corporation.
+                </p>
+                <div class="row">
+                    <div class="col text-right">
+                        <small>
+                            <a href="/resources/privacy" class="footer-link">Privacy Policy</a>
+                        </small>
+                    </div>
+                    <div class="col text-left">
+                        <small>
+                            <a href="/resources/terms-of-use" class="footer-link">Terms of Use</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 p-2 footer-responsive-break"></div>
+            <div class="col">
+                <div class="footer-float-right-responsive">
+                    <div class="mb-1">
+                        <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
+                            <!-- <i class="fa fa-twitter"></i> -->
+                            <img src="/theme/images/twitter.png" class="mr-1 twitter-icon">
+                            <b>@MITREattack</b>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/contact" class="btn btn-primary w-100">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+    <!--SCRIPTS-->
+    <script src="/theme/scripts/jquery-3.2.1.min.js"></script>
+    <script src="/theme/scripts/popper.min.js"></script>
+    <script src="/theme/scripts/bootstrap.min.js"></script>
+    <script src="/theme/scripts/site.js"></script>
+    <script src="/theme/scripts/lunr-2.3.3.js"></script>
+    <script src="/theme/scripts/search.js"></script>
+    <script src="/theme/scripts/index.js"></script>
+
+<!--SCRIPTS-->
+<script src="/theme/scripts/navigation.js"></script>
+</body>
+
+</html>
+<!--startindex-->

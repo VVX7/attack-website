@@ -1,0 +1,4 @@
+Title: enterprise Techniques
+Template: general/json
+save_as: software/S0010/S0010-enterprise-layer.json
+json: {"description": "Enterprise techniques used by Lurid, ATT&CK software S0010 v1.0", "name": "Lurid (S0010)", "domain": "mitre-enterprise", "version": "2.2", "techniques": [{"score": 1, "techniqueID": "T1024", "comment": "Lurid performs XOR encryption.[2]"}, {"score": 1, "techniqueID": "T1002", "comment": "Lurid can compress data before sending it.[2]"}], "gradient": {"colors": ["#ffffff", "#66b1ff"], "minValue": 0, "maxValue": 1}, "legendItems": [{"label": "used by Lurid", "color": "#66b1ff"}]}

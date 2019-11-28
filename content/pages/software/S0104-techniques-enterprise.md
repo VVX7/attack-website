@@ -1,0 +1,4 @@
+Title: enterprise Techniques
+Template: general/json
+save_as: software/S0104/S0104-enterprise-layer.json
+json: {"description": "Enterprise techniques used by netstat, ATT&CK software S0104 v1.0", "name": "netstat (S0104)", "domain": "mitre-enterprise", "version": "2.2", "techniques": [{"score": 1, "techniqueID": "T1049", "comment": "netstat can be used to enumerate local network connections, including active TCP connections and other network statistics.[1]"}], "gradient": {"colors": ["#ffffff", "#66b1ff"], "minValue": 0, "maxValue": 1}, "legendItems": [{"label": "used by netstat", "color": "#66b1ff"}]}
